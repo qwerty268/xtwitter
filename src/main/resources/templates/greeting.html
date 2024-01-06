@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <div th:replace="~{fragments/common :: settings}"></div>
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navigation}"></div>
+<div class="container mt-5">
+    <h5>Здравствуйте!</h5>
+    <div>Это клон тивттера</div>
+</div>
+<div th:insert="~{fragments/common :: footer}"></div>
+</body>
+</html>

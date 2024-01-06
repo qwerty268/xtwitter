@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <div th:replace="~{fragments/common :: settings}"></div>
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navigation}"></div>
+<div th:insert="~{fragments/logout :: copy}"></div>
+<span><a href="/users">Список пользователей</a></span>
+<div>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" name="text" placeholder="Введите сообщение">
+        <input type="text" name="tag" placeholder="Тэг">
+        <input type="file" name="file">
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+
+<div>Список сообщений</div>
+<div>
+    <form method="get" action="/main">
+        <input type="text" name="filter" placeholder="Введите тэг" th:value="${filter}">
+        <button type="submit">Найти</button>
+    </form>
+</div>
+<div th:each="message: ${messages}">
+    <b th:text="${message.id}">id</b>
+    <span th:text="${message.text}">text</span>
+    <i th:text="${message.tag}">tag</i>
+    <strong th:text="${message.getAuthorName()}">name</strong>
+    <div th:if="${message.filename}">
+        <img th:src="@{/image/{filename}(filename=${message.filename})}">
+    </div>
+</div>
+<div th:insert="~{fragments/common :: footer}"></div>
+</body>
+</html>

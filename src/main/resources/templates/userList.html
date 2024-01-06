@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="~{fragments/common :: settings}"></div>
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navigation}"></div>
+<H1>Список пользователей</H1>
+<table>
+    <thead>
+    <th>Имя</th>
+    <th>Роли</th>
+    </thead>
+    <tbody>
+    <tr th:each="user: ${users}">
+        <td th:text="${user.username}">id</td>
+        <td th:each="role,iterStat : ${user.roles}"
+            th:text="${role} + ${!iterStat.last ? ', ' : ''}"></td>
+        <td><a th:href="@{/users/{id}(id=${user.id})}">edit</a></td>
+    </tr>
+    </tbody>
+</table>
+<div th:insert="~{fragments/common :: footer}"></div>
+</body>
+</html>

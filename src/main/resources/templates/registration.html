@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <div th:replace="~{fragments/common :: settings}"></div>
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navigation}"></div>
+<div class="alert alert-danger" role="alert" th:text="${error}" th:if="${error}" style="color: crimson"></div>
+<form th:action="@{/registration}" method="post">
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><input type="submit" value="Зарегистрироваться"/></div>
+</form>
+<div th:insert="~{fragments/common :: footer}"></div>
+</body>
+</html>
