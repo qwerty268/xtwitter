@@ -5,9 +5,18 @@
     <div th:replace="~{fragments/common :: settings}"></div>
 </head>
 <body>
+
 <div th:replace="~{fragments/navbar :: navigation}"></div>
-<h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
-<div th:insert="~{fragments/logout :: copy}"></div>
+
+<main class="container">
+    <div class="container mt-5"></div>
+    <h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+    <div class="container mt-5"></div>
+    <div th:insert="~{fragments/logout :: copy}"></div>
+    <div class="container mt-5"></div>
+</main>
+
 <div th:insert="~{fragments/common :: footer}"></div>
+
 </body>
 </html>

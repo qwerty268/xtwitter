@@ -29,7 +29,9 @@
                     </div>
                 </div>
             </ul>
-            <div class="navbar-text" th:remove="tag" sec:authentication="name">name</div>
+
+            <div class="navbar-text" sec:authentication="name">name</div>
+            <div class="ml-3 mr-3" sec:authorize="isAuthenticated()" th:insert="~{fragments/logout :: copy}"></div>
         </div>
     </nav>
 </div>

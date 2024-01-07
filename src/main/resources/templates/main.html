@@ -6,33 +6,54 @@
 </head>
 <body>
 <div th:replace="~{fragments/navbar :: navigation}"></div>
-<div th:insert="~{fragments/logout :: copy}"></div>
-<span><a href="/users">Список пользователей</a></span>
-<div>
-    <form method="post" enctype="multipart/form-data">
-        <input type="text" name="text" placeholder="Введите сообщение">
-        <input type="text" name="tag" placeholder="Тэг">
-        <input type="file" name="file">
-        <button type="submit">Добавить</button>
-    </form>
-</div>
+<main class="container mt-5">
 
-<div>Список сообщений</div>
-<div>
-    <form method="get" action="/main">
-        <input type="text" name="filter" placeholder="Введите тэг" th:value="${filter}">
-        <button type="submit">Найти</button>
-    </form>
-</div>
-<div th:each="message: ${messages}">
-    <b th:text="${message.id}">id</b>
-    <span th:text="${message.text}">text</span>
-    <i th:text="${message.tag}">tag</i>
-    <strong th:text="${message.getAuthorName()}">name</strong>
-    <div th:if="${message.filename}">
-        <img th:src="@{/image/{filename}(filename=${message.filename})}">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <form method="get" action="/main" class="form-inline">
+                <input type="text" name="filter" class="form-control" placeholder="Введите тэг" th:value="${filter}">
+                <button class="btn btn-primary ml-2" type="submit">Найти</button>
+            </form>
+        </div>
     </div>
-</div>
+
+    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+       aria-controls="collapseExample">
+        Добавить новый твит
+    </a>
+
+    <div class="collapse mt-2" id="collapseExample">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="text" placeholder="Введите сообщение">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="tag" placeholder="Тэг">
+                </div>
+                <div class="form-group">
+                    <div class="custom-file">
+                        <input id="customFile" type="file" name="file">
+                        <label class="custom-file-label" for="customFile">Выберите файл</label>
+                    </div>
+                </div>
+                <button class="btn btn-primary ml-2" type="submit">Добавить</button>
+            </div>
+        </form>
+    </div>
+
+    <div>Список сообщений</div>
+
+    <div th:each="message: ${messages}">
+        <b th:text="${message.id}">id</b>
+        <span th:text="${message.text}">text</span>
+        <i th:text="${message.tag}">tag</i>
+        <strong th:text="${message.getAuthorName()}">name</strong>
+        <div th:if="${message.filename}">
+            <img th:src="@{/image/{filename}(filename=${message.filename})}">
+        </div>
+    </div>
+</main>
 <div th:insert="~{fragments/common :: footer}"></div>
 </body>
 </html>

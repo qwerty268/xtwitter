@@ -1,3 +1,12 @@
 body {
     color: #113;
 }
+html {
+    min-height: 100%;
+    position:relative;
+}
+
+body {
+    min-height: 100%;
+    position:relative;
+}
