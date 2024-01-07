@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365db751-1631-4994-aac0-c2a9d1baa5f6" name="Changes" comment="feat: authentication, messages with owner">
+    <list default="true" id="365db751-1631-4994-aac0-c2a9d1baa5f6" name="Changes" comment="feat: bootstrap">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/common.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/common.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/logout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/hello.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +127,7 @@
       <workItem from="1704555241487" duration="13480000" />
       <workItem from="1704578609562" duration="7166000" />
       <workItem from="1704624905521" duration="5406000" />
-      <workItem from="1704643362279" duration="14059000" />
+      <workItem from="1704643362279" duration="16025000" />
     </task>
     <task id="LOCAL-00001" summary="feat: authentication, messages with owner">
       <created>1704653559101</created>
@@ -142,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704653559101</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: bootstrap">
+      <created>1704665786157</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704665786157</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +162,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: authentication, messages with owner" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: authentication, messages with owner" />
+    <MESSAGE value="feat: bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: bootstrap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -44,15 +44,34 @@
 
     <div>Список сообщений</div>
 
-    <div th:each="message: ${messages}">
-        <b th:text="${message.id}">id</b>
-        <span th:text="${message.text}">text</span>
-        <i th:text="${message.tag}">tag</i>
-        <strong th:text="${message.getAuthorName()}">name</strong>
-        <div th:if="${message.filename}">
-            <img th:src="@{/image/{filename}(filename=${message.filename})}">
+    <!--    <div th:each="message: ${messages}">
+            <b th:text="${message.id}">id</b>
+            <span th:text="${message.text}">text</span>
+            <i th:text="${message.tag}">tag</i>
+            <strong th:text="${message.getAuthorName()}">name</strong>
+            <div th:if="${message.filename}">
+                <img th:src="@{/image/{filename}(filename=${message.filename})}">
+            </div>
+        </div>-->
+    <div class="card-columns">
+        <div th:each="message: ${messages}" style="text-align: center">
+            <div class="card" style="width: 18rem;">
+                <div th:if="${message.filename}">
+                    <img class="card-img-top" th:src="@{/image/{filename}(filename=${message.filename})}"
+                         alt="Card image cap">
+                </div>
+
+                <span th:text="${message.text}">text</span>
+                <i th:text="'#' + ${message.tag}">tag</i>
+
+                <div class="card-footer text-muted" th:text="${message.getAuthorName()}">
+                    автор
+                </div>
+
+            </div>
         </div>
     </div>
+
 </main>
 <div th:insert="~{fragments/common :: footer}"></div>
 </body>
