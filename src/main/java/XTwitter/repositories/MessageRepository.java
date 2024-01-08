@@ -1,7 +1,7 @@
-package com.example.xtwitter.repositories;
+package XTwitter.repositories;
 
 
-import com.example.xtwitter.models.Message;
+import XTwitter.models.Message;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

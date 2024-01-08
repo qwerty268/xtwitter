@@ -1,9 +1,9 @@
-package com.example.xtwitter.controllers;
+package XTwitter.controllers;
 
-import com.example.xtwitter.models.Message;
-import com.example.xtwitter.models.User;
-import com.example.xtwitter.repositories.MessageRepository;
-import com.example.xtwitter.services.MessageService;
+import XTwitter.models.User;
+import XTwitter.models.Message;
+import XTwitter.repositories.MessageRepository;
+import XTwitter.services.MessageService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

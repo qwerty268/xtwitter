@@ -4,16 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365db751-1631-4994-aac0-c2a9d1baa5f6" name="Changes" comment="feat: pretty messages; end">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/userProfile.html" afterDir="false" />
+    <list default="true" id="365db751-1631-4994-aac0-c2a9d1baa5f6" name="Changes" comment="feat: user profile">
+      <change afterPath="$PROJECT_DIR$/src/test/java/XTwitter/LoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/XTwitter/RegistrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/pentaho.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/models/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/models/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/ServingWebContentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/XTwitter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/controllers/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/exceptions/UserAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/exceptions/UserAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/models/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/models/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/models/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/repositories/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/repositories/MessageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/services/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/services/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +35,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -58,27 +70,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/downloads_D/xtwitter&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;7f45be198e70b57c1d585537515e8629&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "D:/downloads_D/xtwitter/src/test/resources",
+    "list.type.of.created.stylesheet": "CSS",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "spring.configuration.checksum": "7f45be198e70b57c1d585537515e8629"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\downloads_D\xtwitter\src\test\resources" />
       <recent name="D:\downloads_D\sweater\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -87,17 +102,90 @@
       <recent name="D:\downloads_D\xtwitter\src\main\resources\templates" />
       <recent name="D:\downloads_D\xtwitter\src\main\resources" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="XTwitter" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="XTwitter.controllers" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServingWebContentApplication">
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LoginTest">
+    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="xtwitter" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.sweater.Application" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sweater.*" />
+          <option name="PATTERN" value="XTwitter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="XTwitter" />
+      <option name="MAIN_CLASS_NAME" value="XTwitter.LoginTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xtwitter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="XTwitter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="XTwitter" />
+      <option name="MAIN_CLASS_NAME" value="XTwitter.MainTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xtwitter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="XTwitter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="XTwitter" />
+      <option name="MAIN_CLASS_NAME" value="XTwitter.RegistrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.testAddUserWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xtwitter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="XTwitter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="XTwitter" />
+      <option name="MAIN_CLASS_NAME" value="XTwitter.RegistrationTest" />
+      <option name="METHOD_NAME" value="testAddUserWithException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.testRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xtwitter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="XTwitter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="XTwitter" />
+      <option name="MAIN_CLASS_NAME" value="XTwitter.RegistrationTest" />
+      <option name="METHOD_NAME" value="testRegistration" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,14 +195,26 @@
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="xtwitter" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.xtwitter.ServingWebContentApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="XTwitter.XTwitter" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.LoginTest" />
+      <item itemvalue="JUnit.MainTest" />
+      <item itemvalue="JUnit.RegistrationTest" />
+      <item itemvalue="JUnit.RegistrationTest.testAddUserWithException" />
+      <item itemvalue="JUnit.RegistrationTest.testRegistration" />
+      <item itemvalue="Spring Boot.ServingWebContentApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ServingWebContentApplication" />
+        <item itemvalue="JUnit.LoginTest" />
+        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.RegistrationTest" />
+        <item itemvalue="JUnit.RegistrationTest.testAddUserWithException" />
+        <item itemvalue="JUnit.RegistrationTest.testRegistration" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +234,7 @@
       <workItem from="1704578609562" duration="7166000" />
       <workItem from="1704624905521" duration="5406000" />
       <workItem from="1704643362279" duration="16208000" />
-      <workItem from="1704711253427" duration="3009000" />
+      <workItem from="1704711253427" duration="12771000" />
     </task>
     <task id="LOCAL-00001" summary="feat: authentication, messages with owner">
       <created>1704653559101</created>
@@ -164,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704667698421</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: user profile">
+      <created>1704714304352</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704714304352</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +293,29 @@
     <MESSAGE value="feat: bootstrap" />
     <MESSAGE value="feat: pretty messages" />
     <MESSAGE value="feat: pretty messages; end" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: pretty messages; end" />
+    <MESSAGE value="feat: user profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: user profile" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/XTwitter/controllers/MainController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/XTwitter/controllers/RegistrationController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/XTwitter/controllers/RegistrationController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

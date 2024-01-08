@@ -1,8 +1,8 @@
-package com.example.xtwitter.controllers;
+package XTwitter.controllers;
 
-import com.example.xtwitter.models.User;
-import com.example.xtwitter.exceptions.UserAlreadyExistsException;
-import com.example.xtwitter.services.UserService;
+import XTwitter.models.User;
+import XTwitter.exceptions.UserAlreadyExistsException;
+import XTwitter.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;

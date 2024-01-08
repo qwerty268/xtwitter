@@ -1,8 +1,8 @@
-package com.example.xtwitter.controllers;
+package XTwitter.controllers;
 
-import com.example.xtwitter.models.Role;
-import com.example.xtwitter.models.User;
-import com.example.xtwitter.services.UserService;
+import XTwitter.models.Role;
+import XTwitter.models.User;
+import XTwitter.services.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;

@@ -1,4 +1,4 @@
-package com.example.xtwitter.exceptions;
+package XTwitter.exceptions;
 
 import lombok.extern.slf4j.Slf4j;
 

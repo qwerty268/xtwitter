@@ -1,9 +1,9 @@
-package com.example.xtwitter.services;
+package XTwitter.services;
 
-import com.example.xtwitter.models.Role;
-import com.example.xtwitter.models.User;
-import com.example.xtwitter.exceptions.UserAlreadyExistsException;
-import com.example.xtwitter.repositories.UserRepository;
+import XTwitter.models.User;
+import XTwitter.models.Role;
+import XTwitter.exceptions.UserAlreadyExistsException;
+import XTwitter.repositories.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

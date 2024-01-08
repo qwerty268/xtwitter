@@ -1,8 +1,8 @@
-package com.example.xtwitter.config;
+package XTwitter.config;
 
-import com.example.xtwitter.models.Role;
-import com.example.xtwitter.models.User;
-import com.example.xtwitter.services.UserService;
+import XTwitter.models.User;
+import XTwitter.services.UserService;
+import XTwitter.models.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

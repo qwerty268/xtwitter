@@ -1,4 +1,4 @@
-package com.example.xtwitter.models;
+package XTwitter.models;
 
 
 import org.springframework.security.core.GrantedAuthority;

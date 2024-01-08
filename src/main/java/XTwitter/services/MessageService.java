@@ -1,8 +1,8 @@
-package com.example.xtwitter.services;
+package XTwitter.services;
 
-import com.example.xtwitter.models.Message;
-import com.example.xtwitter.models.User;
-import com.example.xtwitter.repositories.MessageRepository;
+import XTwitter.models.User;
+import XTwitter.models.Message;
+import XTwitter.repositories.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
-import java.util.logging.FileHandler;
 
 @Service
 public class MessageService {
