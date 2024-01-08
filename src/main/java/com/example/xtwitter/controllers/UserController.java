@@ -6,6 +6,7 @@ import com.example.xtwitter.services.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +15,7 @@ import java.util.Map;
 
 @Slf4j
 @Controller
-@PreAuthorize("hasAuthority('ADMIN')")
+
 @RequestMapping("/users")
 public class UserController {
     private final UserService userService;
@@ -24,6 +25,7 @@ public class UserController {
         this.userService = userService;
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping
     public String getListOfUsersPage(Model model) {
         model.addAttribute("users", userService.findAll());
@@ -31,6 +33,7 @@ public class UserController {
         return "userList";
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/{user}")
     public String getEditUserPage(@PathVariable User user, Model model) {
         log.info(user.toString());
@@ -39,10 +42,23 @@ public class UserController {
         return "userEdit";
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping("/update")
     public String userUpdate(@RequestParam("userId") User user, @RequestParam Map<String, String> formParams) {
         userService.updateUser(user, formParams);
         return "redirect:/users";
     }
 
+    @GetMapping("/profile")
+    public String profile(Model model, @AuthenticationPrincipal User user) {
+        model.addAttribute("user", user);
+        return "userProfile";
+    }
+
+    @PostMapping("/profile")
+    public String updateProfile(@AuthenticationPrincipal User user, @RequestParam String username,
+                                @RequestParam String password) {
+        userService.updateUser(user, username, password);
+        return "redirect:/users/profile";
+    }
 }

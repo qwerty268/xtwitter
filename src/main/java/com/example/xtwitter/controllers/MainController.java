@@ -35,8 +35,8 @@ public class MainController {
 
 
     @GetMapping("/")
-    public String greeting() {
-        return "greeting";
+    public String home() {
+        return "home";
     }
 
     @GetMapping("/main")

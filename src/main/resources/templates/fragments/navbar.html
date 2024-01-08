@@ -16,10 +16,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/main">Главная страница</a>
+                    <a class="nav-link" href="/">Главная страница</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Сообщения</a>
+                    <a class="nav-link" href="/main">Сообщения</a>
                 </li>
                 <div sec:authorize="isAuthenticated()">
                     <div sec:authorize="hasAuthority('ADMIN')">
@@ -29,8 +29,12 @@
                     </div>
                 </div>
             </ul>
-
-            <div class="navbar-text" sec:authentication="name">name</div>
+            <div sec:authorize="!isAuthenticated()">
+                <a class="navbar-text" href="/login">Гость</a>
+            </div>
+            <div sec:authorize="isAuthenticated()">
+                <a class="navbar-text" sec:authentication="name" href="/users/profile">name</a>
+            </div>
             <div class="ml-3 mr-3" sec:authorize="isAuthenticated()" th:insert="~{fragments/logout :: copy}"></div>
         </div>
     </nav>

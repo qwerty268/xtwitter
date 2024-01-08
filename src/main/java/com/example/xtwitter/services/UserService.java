@@ -36,9 +36,23 @@ public class UserService implements UserDetailsService {
         allRoles.stream().filter(params::containsKey).forEach((role) -> newUserRoles.add(Role.valueOf(role)));
 
         user.setRoles(newUserRoles);
-        log.info(String.format("Пользователь обговлен: %s", user));
+
         userRepository.save(user);
+        log.info(String.format("Пользователь обновлен: %s", user));
     }
+
+
+    @Transactional
+    public void updateUser(User user, String username, String password) {
+        log.info(String.format("Начато обновление пользователя '%s'", user));
+
+        user.setUsername(username);
+        user.setPassword(password);
+
+        userRepository.save(user);
+        log.info(String.format("Пользователь обновлен: %s", user));
+    }
+
 
     @Transactional
     public List<User> findAll() {
