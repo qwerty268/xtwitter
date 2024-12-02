@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="365db751-1631-4994-aac0-c2a9d1baa5f6" name="Changes" comment="feat: user profile">
-      <change afterPath="$PROJECT_DIR$/src/test/java/XTwitter/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/XTwitter/RegistrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/pentaho.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/ServingWebContentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/XTwitter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/config/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/controllers/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/exceptions/UserAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/exceptions/UserAlreadyExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/models/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/models/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/models/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/repositories/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/repositories/MessageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/services/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/services/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/xtwitter/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/XTwitter/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +63,9 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "D:/downloads_D/xtwitter/src/test/resources",
+    "last_opened_file_path": "C:/Users/5appr/dev/xtwitter",
     "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -112,7 +94,7 @@
       <recent name="XTwitter.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoginTest">
+  <component name="RunManager" selected="Spring Boot.ServingWebContentApplication">
     <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="xtwitter" />
       <extension name="coverage">
@@ -235,6 +217,7 @@
       <workItem from="1704624905521" duration="5406000" />
       <workItem from="1704643362279" duration="16208000" />
       <workItem from="1704711253427" duration="12771000" />
+      <workItem from="1733152710988" duration="320000" />
     </task>
     <task id="LOCAL-00001" summary="feat: authentication, messages with owner">
       <created>1704653559101</created>
