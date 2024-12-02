@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:14.3-alpine
+    container_name: db
+    volumes:
+      - /var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=xtwitter
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+  gateway:
+    image: xtwitter
+    build: ./
+    container_name: xtwitter
+    ports:
+      - "8090:8090"
+
