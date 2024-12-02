@@ -1,20 +1,29 @@
 version: '3.8'
 services:
-  db:
+  postgres:
+    container_name: postgres
     image: postgres:14.3-alpine
-    container_name: db
-    volumes:
-      - /var/lib/postgresql/data/
-    ports:
-      - "5432:5432"
     environment:
-      - POSTGRES_DB=xtwitter
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=root
-  gateway:
+      POSTGRES_DB: xtwitter
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "127.0.0.1:5450:5432"
+    volumes:
+      - ./db/migrations:/docker-entrypoint-initdb.d
+
+  xtwitter:
     image: xtwitter
+    depends_on:
+      - postgres
     build: ./
     container_name: xtwitter
     ports:
-      - "8090:8090"
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/xtwitter
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./static/images:/uploads/images
 

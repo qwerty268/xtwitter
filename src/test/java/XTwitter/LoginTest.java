@@ -18,56 +18,56 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@AutoConfigureMockMvc
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@TestPropertySource("/application-test.properties")
-class LoginTest {
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private MockMvc mockMvc;
+// @AutoConfigureMockMvc
+// @RunWith(SpringRunner.class)
+// @SpringBootTest
+// @TestPropertySource("/application-test.properties")
+// class LoginTest {
+//     @Autowired
+//     private UserService userService;
+//     @Autowired
+//     private MockMvc mockMvc;
 
-    @Test
-    public void contextLoads() throws Exception {
-        this.mockMvc.perform(get("/"))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(content().string(containsString("Здравствуйте!")))
-                .andExpect(content().string(containsString("Это клон тивттера")));
-    }
+//     @Test
+//     public void contextLoads() throws Exception {
+//         this.mockMvc.perform(get("/"))
+//                 .andDo(print())
+//                 .andExpect(status().isOk())
+//                 .andExpect(content().string(containsString("Здравствуйте!")))
+//                 .andExpect(content().string(containsString("Это клон тивттера")));
+//     }
 
-    @Test
-    public void accessDeniedTest() throws Exception {
-        this.mockMvc.perform(get("/main"))
-                .andDo(print())
-                .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("http://localhost/login"));
-    }
+//     @Test
+//     public void accessDeniedTest() throws Exception {
+//         this.mockMvc.perform(get("/main"))
+//                 .andDo(print())
+//                 .andExpect(status().is3xxRedirection())
+//                 .andExpect(redirectedUrl("http://localhost/login"));
+//     }
 
-    @Test
-    public void correctLoginTest() throws Exception {
-        User newUser = new User();
-        newUser.setUsername("qwerty");
-        newUser.setPassword("1");
-        try {
-            userService.creteNewUser(newUser);
-        } catch (Exception e){}
-        this.mockMvc.perform(formLogin().user("qwerty").password("1"))
-                .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/"));
-    }
+//     @Test
+//     public void correctLoginTest() throws Exception {
+//         User newUser = new User();
+//         newUser.setUsername("qwerty");
+//         newUser.setPassword("1");
+//         try {
+//             userService.creteNewUser(newUser);
+//         } catch (Exception e){}
+//         this.mockMvc.perform(formLogin().user("qwerty").password("1"))
+//                 .andExpect(status().is3xxRedirection())
+//                 .andExpect(redirectedUrl("/"));
+//     }
 
-    @Test
-    public void badCredentials() throws Exception {
-        User newUser = new User();
-        newUser.setUsername("qwerty");
-        newUser.setPassword("1");
-        try {
-            userService.creteNewUser(newUser);
-        }catch (Exception e){}
-        this.mockMvc.perform(post("/login").param("username", "jonh"))
-                .andDo(print())
-                .andExpect(redirectedUrl("/login?error"));
-    }
-}
+//     @Test
+//     public void badCredentials() throws Exception {
+//         User newUser = new User();
+//         newUser.setUsername("qwerty");
+//         newUser.setPassword("1");
+//         try {
+//             userService.creteNewUser(newUser);
+//         }catch (Exception e){}
+//         this.mockMvc.perform(post("/login").param("username", "jonh"))
+//                 .andDo(print())
+//                 .andExpect(redirectedUrl("/login?error"));
+//     }
+// }

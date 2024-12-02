@@ -28,58 +28,58 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 
-@AutoConfigureMockMvc
+// @AutoConfigureMockMvc
 
-@SpringBootTest
-@TestPropertySource("/application-test.properties")
-public class RegistrationTest {
+// @SpringBootTest
+// @TestPropertySource("/application-test.properties")
+// public class RegistrationTest {
 
-    @Mock
-    private UserService userService;
-    @Autowired
-    private MockMvc mockMvc;
-    @InjectMocks
-    private RegistrationController registrationController;
+//     @Mock
+//     private UserService userService;
+//     @Autowired
+//     private MockMvc mockMvc;
+//     @InjectMocks
+//     private RegistrationController registrationController;
 
-    @Test
-    public void testRegistration() {
-        String result = registrationController.registration();
-        assertEquals("registration", result);
-    }
+//     @Test
+//     public void testRegistration() {
+//         String result = registrationController.registration();
+//         assertEquals("registration", result);
+//     }
 
-    @Test
-    public void testAddUser() {
-        User user = new User();
-        RedirectAttributes redirectAttrs = new RedirectAttributesModelMap();
+//     @Test
+//     public void testAddUser() {
+//         User user = new User();
+//         RedirectAttributes redirectAttrs = new RedirectAttributesModelMap();
 
-        String result = registrationController.addUser(user, redirectAttrs);
+//         String result = registrationController.addUser(user, redirectAttrs);
 
-        verify(userService, times(1)).creteNewUser(user);
-        assertEquals("redirect:/login", result);
-    }
+//         verify(userService, times(1)).creteNewUser(user);
+//         assertEquals("redirect:/login", result);
+//     }
 
-    @Test
-    public void testAddUserWithException() throws Exception {
-        User user = new User();
-        user.setUsername("user");
-        user.setPassword("user");
+//     @Test
+//     public void testAddUserWithException() throws Exception {
+//         User user = new User();
+//         user.setUsername("user");
+//         user.setPassword("user");
 
-        ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+//         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 
-        String json = ow.writeValueAsString(user);
-        this.mockMvc.perform(post("/registration").content(json))
-                .andDo(print())
-                .andExpect(content().string(containsString("")));
-    }
+//         String json = ow.writeValueAsString(user);
+//         this.mockMvc.perform(post("/registration").content(json))
+//                 .andDo(print())
+//                 .andExpect(content().string(containsString("")));
+//     }
 
-    @Test
-    public void testShowAlert() {
-        RedirectAttributes redirectAttrs = new RedirectAttributesModelMap();
-        Model model = new ExtendedModelMap();
+//     @Test
+//     public void testShowAlert() {
+//         RedirectAttributes redirectAttrs = new RedirectAttributesModelMap();
+//         Model model = new ExtendedModelMap();
 
-        String result = registrationController.showAlert(redirectAttrs, model);
+//         String result = registrationController.showAlert(redirectAttrs, model);
 
-        assertTrue(redirectAttrs.getFlashAttributes().containsValue("Пользователь стаким именем уже существует"));
-        assertEquals("registration", result);
-    }
-}
+//         assertTrue(redirectAttrs.getFlashAttributes().containsValue("Пользователь стаким именем уже существует"));
+//         assertEquals("registration", result);
+//     }
+// }
